@@ -24,6 +24,8 @@ export default class Example5 extends Phaser.Scene {
       _canvasWigth = width / 9 * 16
       _canvasHeight = width
     }
+    var group = this.add.group()
+    var img6;
     // // 1
     const animate = async() => {
       await new Promise((resolve) => {
@@ -70,12 +72,11 @@ export default class Example5 extends Phaser.Scene {
           });
           setTimeout(() => {
             let img5 = this.add.image(_canvasWigth * 0.58, 0, 'img5').setOrigin(0).setScale(_scale)
-            let img6 = this.add.image(_canvasWigth, _canvasHeight * 0.03, 'img6').setOrigin(0).setScale(_scale)
-            // this.scene.bringToTop(img6);
+            img6 = this.add.image(_canvasWigth, _canvasHeight * 0.03, 'img6').setOrigin(0).setScale(_scale)
             this.tweens.add({
               targets: img6,
               x: _canvasWigth * 0.65,
-              y: _canvasHeight * 0.05,
+              y: _canvasHeight * 0.03,
               duration: 50,
               ease: 'Power',
               delay: 100
@@ -181,6 +182,7 @@ export default class Example5 extends Phaser.Scene {
             duration: 300,
             ease: 'Power'
           });
+          img6 = this.add.image(_canvasWigth * 0.65, _canvasHeight * 0.03, 'img6').setOrigin(0).setScale(_scale)
           setTimeout(() => {
             let shape = this.make.graphics();
             //  Create a hash shape Graphics object

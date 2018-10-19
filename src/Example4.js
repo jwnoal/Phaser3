@@ -6,7 +6,7 @@ export default class Example4 extends Phaser.Scene{
   preload() {
     // 加载资源
     for(let i=1; i < 10; i++){
-      this.load.image(`img${i}`, `assets/img${i}.png`)
+      this.load.image(`img${i}`, `assets/img1/img${i}.png`)
     }
   }
   create() {
@@ -149,6 +149,11 @@ export default class Example4 extends Phaser.Scene{
           resolve()
         },700)
       })
+      // await new Promise((resolve) => {
+      //   setTimeout(() =>{ 
+      //     this.scene.start('Example5')
+      //   },1000)
+      // })
     }
     animate()
   }
