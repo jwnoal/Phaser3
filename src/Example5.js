@@ -6,7 +6,7 @@ export default class Example5 extends Phaser.Scene {
   preload() {
     // 加载资源
     for (let i = 1; i < 15; i++) {
-      this.load.image(`img${i}`, `assets/img2/img${i}.png`)
+      this.load.image(`img2-${i}`, `assets/img2/img${i}.png`)
     }
   }
   create() {
@@ -29,7 +29,7 @@ export default class Example5 extends Phaser.Scene {
     // // 1
     const animate = async() => {
       await new Promise((resolve) => {
-        let img1 = this.add.image(0, 0, 'img1').setOrigin(0).setScale(_scale).setAlpha(0)
+        let img1 = this.add.image(0, 0, 'img2-1').setOrigin(0).setScale(_scale).setAlpha(0)
         this.tweens.add({
           targets: img1,
           alpha: 1,
@@ -40,14 +40,14 @@ export default class Example5 extends Phaser.Scene {
       })
       await new Promise((resolve) => {
         setTimeout(() => {
-          let img2 = this.add.image(_canvasWigth * 0.16, 0, 'img2').setOrigin(0).setScale(_scale).setAlpha(0)
+          let img2 = this.add.image(_canvasWigth * 0.16, 0, 'img2-2').setOrigin(0).setScale(_scale).setAlpha(0)
           this.tweens.add({
             targets: img2,
             alpha: 1,
             duration: 500,
             ease: 'Power'
           });
-          let img3 = this.add.image(_canvasWigth * 0.25, _canvasHeight * 0.18, 'img3').setOrigin(0).setScale(_scale)
+          let img3 = this.add.image(_canvasWigth * 0.25, _canvasHeight * 0.18, 'img2-3').setOrigin(0).setScale(_scale)
           this.tweens.add({
             targets: img3,
             x: _canvasWigth * 0.28,
@@ -61,7 +61,7 @@ export default class Example5 extends Phaser.Scene {
       })
       await new Promise((resolve) => {
         setTimeout(() => {
-          let img4 = this.add.image(_canvasWigth, -_canvasHeight * 0.3, 'img4').setOrigin(0).setScale(_scale)
+          let img4 = this.add.image(_canvasWigth, -_canvasHeight * 0.3, 'img2-4').setOrigin(0).setScale(_scale)
           this.tweens.add({
             targets: img4,
             x: _canvasWigth * 0.58,
@@ -71,8 +71,8 @@ export default class Example5 extends Phaser.Scene {
             delay: 200
           });
           setTimeout(() => {
-            let img5 = this.add.image(_canvasWigth * 0.58, 0, 'img5').setOrigin(0).setScale(_scale)
-            img6 = this.add.image(_canvasWigth, _canvasHeight * 0.03, 'img6').setOrigin(0).setScale(_scale)
+            let img5 = this.add.image(_canvasWigth * 0.58, 0, 'img2-5').setOrigin(0).setScale(_scale)
+            img6 = this.add.image(_canvasWigth, _canvasHeight * 0.03, 'img2-6').setOrigin(0).setScale(_scale)
             this.tweens.add({
               targets: img6,
               x: _canvasWigth * 0.65,
@@ -87,7 +87,7 @@ export default class Example5 extends Phaser.Scene {
       })
       await new Promise((resolve) => {
         setTimeout(() => {
-          let img7 = this.add.image(-_canvasWigth * 0.2, _canvasHeight * 0.40, 'img7').setOrigin(0).setScale(_scale)
+          let img7 = this.add.image(-_canvasWigth * 0.2, _canvasHeight * 0.40, 'img2-7').setOrigin(0).setScale(_scale)
           this.tweens.add({
             targets: img7,
             x: 0,
@@ -96,7 +96,7 @@ export default class Example5 extends Phaser.Scene {
             ease: 'Power'
           });
           setTimeout(() => {
-            let img8 = this.add.image(_canvasWigth * 0, _canvasHeight * 0.49, 'img8').setOrigin(0).setScale(_scale)
+            let img8 = this.add.image(_canvasWigth * 0, _canvasHeight * 0.49, 'img2-8').setOrigin(0).setScale(_scale)
             this.tweens.add({
               targets: img7,
               x: 0,
@@ -123,7 +123,7 @@ export default class Example5 extends Phaser.Scene {
       })
       await new Promise((resolve) => {
         setTimeout(() => {
-          let img9 = this.add.image(_canvasWigth * 0.28, _canvasHeight * 0.55, 'img9').setOrigin(0).setScale(_scale).setAlpha(0)
+          let img9 = this.add.image(_canvasWigth * 0.28, _canvasHeight * 0.55, 'img2-9').setOrigin(0).setScale(_scale).setAlpha(0)
           this.tweens.add({
             targets: img9,
             alpha: 1,
@@ -150,8 +150,8 @@ export default class Example5 extends Phaser.Scene {
 
             shape.fillRect(_canvasWigth * 0.6, _canvasHeight * 0.55, _canvasHeight * 0.8, _canvasHeight * 0.5);
             let mask = shape.createGeometryMask();
-            let img10 = this.add.image(_canvasWigth * 0.25, _canvasHeight * 0.8, 'img10').setOrigin(0).setScale(_scale)
-            let img11 = this.add.image(_canvasWigth * 0.42, _canvasHeight * 0.7, 'img11').setOrigin(0).setScale(_scale)
+            let img10 = this.add.image(_canvasWigth * 0.25, _canvasHeight * 0.8, 'img2-10').setOrigin(0).setScale(_scale)
+            let img11 = this.add.image(_canvasWigth * 0.42, _canvasHeight * 0.7, 'img2-11').setOrigin(0).setScale(_scale)
             img10.setMask(mask);
             img11.setMask(mask);
             this.tweens.add({
@@ -174,7 +174,7 @@ export default class Example5 extends Phaser.Scene {
       })
       await new Promise((resolve) => {
         setTimeout(() => {
-          let img12 = this.add.image(_canvasWigth, _canvasHeight * 0.55, 'img12').setOrigin(0).setScale(_scale)
+          let img12 = this.add.image(_canvasWigth, _canvasHeight * 0.55, 'img2-12').setOrigin(0).setScale(_scale)
           this.tweens.add({
             targets: img12,
             x: _canvasWigth * 0.27,
@@ -182,7 +182,7 @@ export default class Example5 extends Phaser.Scene {
             duration: 300,
             ease: 'Power'
           });
-          img6 = this.add.image(_canvasWigth * 0.65, _canvasHeight * 0.03, 'img6').setOrigin(0).setScale(_scale)
+          img6 = this.add.image(_canvasWigth * 0.65, _canvasHeight * 0.03, 'img2-6').setOrigin(0).setScale(_scale)
           setTimeout(() => {
             let shape = this.make.graphics();
             //  Create a hash shape Graphics object
@@ -201,10 +201,10 @@ export default class Example5 extends Phaser.Scene {
             shape.fillPath();
 
             // shape.fillRect(_canvasWigth * 0.6, _canvasHeight * 0.55, _canvasHeight * 0.8, _canvasHeight * 0.5);
-            let img14 = this.add.image(_canvasWigth * 0.77, _canvasHeight * 0.78, 'img14').setScale(_scale * 1.2)
+            let img14 = this.add.image(_canvasWigth * 0.77, _canvasHeight * 0.78, 'img2-14').setScale(_scale * 1.2)
             let mask = shape.createGeometryMask();
             img14.setMask(mask);
-            let img13 = this.add.image(_canvasWigth * 0.76, _canvasHeight * 0.8, 'img13').setScale(0)
+            let img13 = this.add.image(_canvasWigth * 0.76, _canvasHeight * 0.8, 'img2-13').setScale(0)
             this.tweens.add({
               targets: img14,
               scaleX: _scale,
@@ -224,7 +224,11 @@ export default class Example5 extends Phaser.Scene {
           resolve()
         },700)
       })
-      
+      // await new Promise((resolve) => {
+      //   setTimeout(() =>{ 
+      //     this.scene.start('Example4')
+      //   },1000)
+      // })
     }
 
     animate()

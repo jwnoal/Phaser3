@@ -149,11 +149,11 @@ export default class Example4 extends Phaser.Scene{
           resolve()
         },700)
       })
-      // await new Promise((resolve) => {
-      //   setTimeout(() =>{ 
-      //     this.scene.start('Example5')
-      //   },1000)
-      // })
+      await new Promise((resolve) => {
+        setTimeout(() =>{ 
+          this.scene.start('Example5')
+        },2000)
+      })
     }
     animate()
   }
