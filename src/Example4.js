@@ -123,8 +123,10 @@ export default class Example4 extends Phaser.Scene{
               ease: 'Power',
               delay: 0
             });
+          let img7 = this.add.image(_canvasWigth * 0.5, _canvasHeight * 0.6, 'img7').setScale(_scale)
           setTimeout(() => {
             let img9 = this.add.image(_canvasWigth * 0.56, _canvasHeight * 0.58, 'img9').setOrigin(0).setScale(_scale).setRotation(-0.3)
+            
             this.tweens.add({
               targets: img8,
               x: _canvasWigth * 0.56,
