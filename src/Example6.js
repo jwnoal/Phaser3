@@ -1,3 +1,4 @@
+import {_canvasWigth, _canvasHeight, _scale} from './util'
 export default class Example6 extends Phaser.Scene {
   constructor() {
     // 绑定场景
@@ -15,20 +16,6 @@ export default class Example6 extends Phaser.Scene {
     this.load.image('dragon3','assets/img3/dragon3.png')
   }
   create() {
-    // setScale
-    let width = document.body.clientWidth;
-    let height = document.body.clientHeight;
-    let _scale,_canvasWigth,_canvasHeight;
-
-    if(width > height){
-      _scale = height / 1080
-      _canvasWigth = height / 9 * 16
-      _canvasHeight = height
-    }else{
-      _scale = width / 1080
-      _canvasWigth = width / 9 * 16
-      _canvasHeight = width
-    }
 
     let bg = this.add.image(0, 0, 'bg').setOrigin(0).setScale(_scale)
     const animate = async() => {
@@ -150,17 +137,19 @@ export default class Example6 extends Phaser.Scene {
       await new Promise((resolve) => {
         setTimeout(() => {
           let videoDiv = document.getElementById('videoDiv')
-          videoDiv.style.display = 'block';
+          videoDiv.style.width = _canvasWigth
+          videoDiv.style.height = _canvasHeight
+          videoDiv.style.display = 'block'
           let myVid = document.getElementById('myVideo')
           console.log(videoDiv)
           console.log(myVid)
-          myVid.play();
+          myVid.play()
           myVid.addEventListener('ended', () => { 
             this.scene.start('Example7') 
-            videoDiv.style.display = 'none';
-          }, false);
+            videoDiv.style.display = 'none'
+          }, false)
           resolve()
-        },2000)
+        },1200)
       })
     }
     animate()

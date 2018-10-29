@@ -1,3 +1,4 @@
+import {_canvasWigth, _canvasHeight, _scale} from './util'
 export default class Example5 extends Phaser.Scene {
   constructor() {
     // 绑定场景
@@ -10,21 +11,6 @@ export default class Example5 extends Phaser.Scene {
     }
   }
   create() {
-    // setScale
-    let width = document.body.clientWidth;
-    let height = document.body.clientHeight;
-    let _scale,_canvasWigth,_canvasHeight;
-
-    if(width > height){
-      _scale = height / 1080
-      _canvasWigth = height / 9 * 16
-      _canvasHeight = height
-    }else{
-      _scale = width / 1080
-      _canvasWigth = width / 9 * 16
-      _canvasHeight = width
-    }
-    var group = this.add.group()
     var img6;
     // // 1
     const animate = async() => {

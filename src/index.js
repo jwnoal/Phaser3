@@ -1,4 +1,5 @@
 import 'phaser';
+import {_canvasWigth, _canvasHeight} from './util'
 import Example1 from './Example1'
 import Example2 from './Example2'
 import Example3 from './Example3'
@@ -10,8 +11,9 @@ import Example7 from './Example7'
 var config = {
     type: Phaser.AUTO,
     parent: 'canvas',
-    width: document.body.clientHeight/9*16,
-    height: document.body.clientHeight,
+    backgroundColor: '#ffffff',
+    width: _canvasWigth,
+    height: _canvasHeight,
     physics: {
         default: 'arcade',
         arcade: {
